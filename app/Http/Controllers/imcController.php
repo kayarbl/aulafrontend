@@ -28,7 +28,19 @@ class imcController extends Controller
         $resultado["imc"]= round($imc, 2);
 
         switch (true){
-            
+            case($imc < 18.5):
+                $resultado["faixa"] = "Abaixo do peso";
+                break;
+            case ($imc >= 18.5 && $imc <25):
+                $resultado["faixa"] = "Peso Normal";
+                break;
+            case ($imc >= 25 && $imc < 30):
+                $resultado["faixa"] = "Sobrepeso";
+                break;
+                default:
+                $resultado["faixa"]= "Obesidade";
+                break;
         }
+        return view("imc.index", compact("resultado"));
     }
 }
