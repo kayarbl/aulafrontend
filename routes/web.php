@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\imcControllers;
+use App\Http\Controllers\imcController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/imc', (imcController::class, 'index'));
+Route::get('/imc', [imcController::class, 'index']);
+
+Route::post('/imc/calcularImc', [imcController::class, 'calcular']);
