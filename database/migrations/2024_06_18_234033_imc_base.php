@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->double('peso');
              $table->double('altura');
-            $table->timestamp();
+            $table->timestamps();
     });
 
     Schema::create('sessions', function (Blueprint $table){

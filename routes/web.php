@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::get('/imc', [imcController::class, 'index']);
 
 Route::post('/imc/calcularImc', [imcController::class, 'calcular']);
+
+Route::post('/imc/store',[ImcController::class,'store'])->name('imc.store');

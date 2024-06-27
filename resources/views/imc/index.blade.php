@@ -2,7 +2,7 @@
 
 <h1> TESTE <h1>
 
-<form method="post" action="imc/calcularImc">
+<form method="post" action="/imc/store">
     @csrf 
     
   <div class="mb-3">
