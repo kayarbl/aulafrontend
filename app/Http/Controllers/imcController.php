@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ImcModel;
 
 class imcController extends Controller
 {
@@ -57,8 +58,14 @@ class imcController extends Controller
 
         $imc->save();
 
-        return redirect('/imc');
+        return redirect ()->route("imc.calcular", $data);
 
 
     }
+
+    public function show(Resquest $request){
+        $showImc = ImcModel:: orderBy ('id', 'asc')->get();
+
+        return view('imc.show')->with('showImc', $showImc);
+        }
 }

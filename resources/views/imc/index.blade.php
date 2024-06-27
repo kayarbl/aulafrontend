@@ -1,12 +1,18 @@
+
 <x-layout tittle="IMC">
 
-<h1> TESTE <h1>
+<h1 style="color: black; text-align: center;"> TESTE <h1>
 
-<form method="post" action="/imc/store">
+<form method="post" action="/imc/store" class="mbb3">
     @csrf 
-    
+  
+    <div class="mb-3">
+    <label for="formGroupExempleInput" class="form-label" >Nome</label>
+    <input type="text" class="form-control" id="formGroupExempleInput" palceholder="nome" name="nome">
+  </div> 
+
   <div class="mb-3">
-    <label for="formGroupExempleInput" class="form-label">Peso</label>
+    <label for="formGroupExempleInput" class="form-label" >Peso</label>
     <input type="text" class="form-control" id="formGroupExempleInput" palceholder="peso" name="peso">
   </div>
 
@@ -19,11 +25,11 @@
 </div>
 </form>
 
-<label> RESULTADO </label> <br>
+<label style="color: gray;"> RESULTADO </label> <br>
 
-<label> IMC: {{$resultado["imc"]}}</label> <br>
+<label style="color: pink;"> IMC: {{$resultado["imc"]}}</label> <br>
 
-<label> Faixa: {{$resultado["imc"]}}</label> <br>
+<label style="color: pink;"> Faixa: {{$resultado["imc"]}}</label> <br>
 
 <br> <br> <br>
 

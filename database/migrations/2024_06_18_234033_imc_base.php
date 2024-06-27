@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('imc', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('nome');
             $table->double('peso');
              $table->double('altura');
             $table->timestamps();
