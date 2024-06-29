@@ -24,4 +24,8 @@ Route::get('/imc/calcularImc', [imcController::class, 'calcular'])->name('imc.ca
 
 Route::post('/imc/store',[ImcController::class,'store'])->name('imc.store');
 
-Route::get('/imc/show',[ImcController::class,'show']);
+Route::delete('/imc/show/{id}', [ImcController::class,'destroy'])->name('imc.delete');
+
+Route::put('/imc/show/{id}', [ImcController::class, 'update'])->name('imc.update');
+
+Route::get('/imc/show',[ImcController::class,'show'])->name('imc.show');
