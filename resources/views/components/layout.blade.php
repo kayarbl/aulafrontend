@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header style="color: blue; text-align: center;"> PÁGINA IMC </header><br><br><br>
+    <header style="color: blue; text-align: center;"> PÁGINA 1 </header><br><br><br>
     {{$slot}}
 </body>
 

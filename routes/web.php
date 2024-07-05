@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\notasController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\imcController;
 
@@ -29,3 +30,6 @@ Route::delete('/imc/show/{id}', [ImcController::class,'destroy'])->name('imc.del
 Route::put('/imc/show/{id}', [ImcController::class, 'update'])->name('imc.update');
 
 Route::get('/imc/show',[ImcController::class,'show'])->name('imc.show');
+
+
+Route:: get('/notas', [notasController::class,'index']);
